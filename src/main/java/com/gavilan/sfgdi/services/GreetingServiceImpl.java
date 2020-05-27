@@ -1,13 +1,17 @@
 package com.gavilan.sfgdi.services;
 
+import org.springframework.stereotype.Service;
+
 /**
  * @author Ezequiel Gavilan
  * @project sfg-di
  */
+
+@Service
 public class GreetingServiceImpl implements GreetingService {
 
     /**
-     * Método que saluda en ingles.
+     * Saludo en ingles.
      * @return String con saludo en ingles "Hello World".
      */
     @Override
