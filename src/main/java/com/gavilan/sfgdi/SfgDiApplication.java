@@ -22,9 +22,9 @@ public class SfgDiApplication {
 		// instanciar por nosotros mismos la clase MyController.
 		//MyController myController = new MyController();
 
-		String greeting = myController.sayHello();
+		System.out.println("------------------- Primary Bean");
 
-		System.out.println(greeting);
+		System.out.println(myController.sayHello());
 
 		System.out.println("------------------- Property Injected Controller");
 

@@ -20,6 +20,10 @@ public class SetterInjectedController {
         this.greetingService = greetingService;
     }
 
+    /**
+     *
+     * @return String con saludo del setterInjectedGreetingService.
+     */
     public String getGreeting() {
         return greetingService.sayGreeting();
     }

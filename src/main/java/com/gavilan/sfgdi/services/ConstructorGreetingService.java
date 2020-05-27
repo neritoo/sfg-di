@@ -7,12 +7,16 @@ import org.springframework.stereotype.Service;
  * @project sfg-di
  */
 
+/**
+ * Service identifica esta clase como un componente de Spring del estereotipo 'Service'.
+ */
 @Service
 public class ConstructorGreetingService implements GreetingService {
 
     /**
      * Saludo inyectado en ConstructorInjectedController.
-     * @return String con saludo en ingles "Hello World".
+     *
+     * @return String del saludo con DI del constructor.
      */
     @Override
     public String sayGreeting() {

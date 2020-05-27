@@ -11,10 +11,15 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class PropertyInjectedController {
+
     @Qualifier("propertyInjectedGreetingService")
     @Autowired
     public GreetingService greetingService;
 
+    /**
+     *
+     * @return String con saludo del propertyInjectedGreetingService.
+     */
     public String getGreeting() {
         return greetingService.sayGreeting();
     }

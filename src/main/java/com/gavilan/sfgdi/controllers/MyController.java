@@ -1,5 +1,6 @@
 package com.gavilan.sfgdi.controllers;
 
+import com.gavilan.sfgdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -7,12 +8,24 @@ import org.springframework.stereotype.Controller;
  * @project sfg-di
  */
 
+/**
+ * Controlador principal.
+ */
 @Controller
 public class MyController {
 
-    public String sayHello() {
-        System.out.println("Hola mundo!!");
+    private final GreetingService greetingService;
 
-        return "Hola wachos";
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    /**
+     * Saludo usando GreetingService marcado con @Primary, sin uso de Qualifiers.
+     *
+     * @return String con saludo del servicio marcado como @Primary.
+     */
+    public String sayHello() {
+        return greetingService.sayGreeting();
     }
 }
