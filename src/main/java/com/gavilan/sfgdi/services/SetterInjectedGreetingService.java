@@ -8,14 +8,9 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
-
-    /**
-     * Saludo en ingles.
-     * @return String con saludo en ingles "Hello World".
-     */
+public class SetterInjectedGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello World";
+        return "Hello World - Setter";
     }
 }

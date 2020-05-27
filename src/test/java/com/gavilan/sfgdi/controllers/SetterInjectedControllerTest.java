@@ -1,10 +1,8 @@
 package com.gavilan.sfgdi.controllers;
 
-import com.gavilan.sfgdi.services.GreetingServiceImpl;
+import com.gavilan.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Ezequiel Gavilan
@@ -17,7 +15,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
