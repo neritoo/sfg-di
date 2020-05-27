@@ -1,9 +1,6 @@
 package com.gavilan.sfgdi;
 
-import com.gavilan.sfgdi.controllers.ConstructorInjectedController;
-import com.gavilan.sfgdi.controllers.MyController;
-import com.gavilan.sfgdi.controllers.PropertyInjectedController;
-import com.gavilan.sfgdi.controllers.SetterInjectedController;
+import com.gavilan.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +10,12 @@ public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		System.out.println("------------------- I18N");
+
+		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+
+		System.out.println(i18NController.sayHello());
 
 		// La instancia del controlador es creada por el context de Spring, el cual maneja las dependencias por nosotros,
 		// y nosotros solo tenemos que pedirle a Spring por esa instancia.
