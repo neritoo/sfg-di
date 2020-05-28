@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author Ezequiel Gavilan
- * @project sfg-di
  */
 
 @Profile({"ES", "default"})

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Ezequiel Gavilan
- * @project sfg-di
  */
 class SetterInjectedControllerTest {
 

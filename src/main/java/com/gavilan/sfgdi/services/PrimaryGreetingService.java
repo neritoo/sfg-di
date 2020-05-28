@@ -6,10 +6,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author Ezequiel Gavilan
- * @project sfg-di
- */
-
-/**
+ *
  * Service identifica esta clase como un componente de Spring del estereotipo 'Service'.
  * Primary identifica este servicio como el principal al momento de inyectarlo.
  */

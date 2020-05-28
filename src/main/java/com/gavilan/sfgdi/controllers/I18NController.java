@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 
 /**
  * @author Ezequiel Gavilan
- * @project sfg-di
  */
 
 @Controller
