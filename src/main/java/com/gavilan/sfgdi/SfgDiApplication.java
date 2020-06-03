@@ -15,8 +15,14 @@ public class SfgDiApplication {
 		System.out.println("--- The Best Pet is ---");
 		System.out.println(petController.whichPetIsTheBest());
 
+		MyController controller = (MyController) ctx.getBean("myController");
+		System.out.println(controller.sayHello());
+
+		/*
+
 		I18NController i18nController = (I18NController) ctx.getBean("i18NController");
 		System.out.println(i18nController.sayHello());
+
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
@@ -34,6 +40,7 @@ public class SfgDiApplication {
 		System.out.println("-------- Constructor" );
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+		*/
 	}
 
 }

@@ -10,9 +10,14 @@ import org.springframework.stereotype.Service;
  * Service identifica esta clase como un componente de Spring del estereotipo 'Service'.
  * Primary identifica este servicio como el principal al momento de inyectarlo.
  */
-@Primary
-@Service
+
 public class PrimaryGreetingService implements GreetingService {
+
+    private GreetingRepository greetingRepository;
+
+    public PrimaryGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
 
     /**
      * Saluda desde la clase marcada como Primary Bean, lo que permite identificar a ésta clase como el servicio primario
@@ -23,6 +28,6 @@ public class PrimaryGreetingService implements GreetingService {
      */
     @Override
     public String sayGreeting() {
-        return "Hello World - From the PRIMARY Bean";
+        return greetingRepository.getPrimaryGreeting();
     }
 }

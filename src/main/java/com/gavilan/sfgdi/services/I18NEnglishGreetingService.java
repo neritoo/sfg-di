@@ -7,12 +7,16 @@ import org.springframework.stereotype.Service;
  * @author Ezequiel Gavilan
  */
 
-@Profile("EN")
-@Service("i18nService")
 public class I18NEnglishGreetingService implements GreetingService {
+
+    private GreetingRepository greetingRepository;
+
+    public I18NEnglishGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
 
     @Override
     public String sayGreeting() {
-        return "Hello World - EN";
+        return greetingRepository.getEnglishGreeting();
     }
 }
