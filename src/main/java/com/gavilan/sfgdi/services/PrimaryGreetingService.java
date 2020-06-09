@@ -1,17 +1,12 @@
 package com.gavilan.sfgdi.services;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
-
 /**
  * @author Ezequiel Gavilan
  *
  * Service identifica esta clase como un componente de Spring del estereotipo 'Service'.
  * Primary identifica este servicio como el principal al momento de inyectarlo.
  */
-@Primary
-@Service
+
 public class PrimaryGreetingService implements GreetingService {
 
     /**
