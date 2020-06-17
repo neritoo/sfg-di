@@ -1,6 +1,8 @@
 package com.gavilan.sfgdi;
 
 import com.gavilan.sfgdi.controllers.*;
+import com.gavilan.sfgdi.examplebeans.FakeDataSource;
+import com.gavilan.sfgdi.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -11,14 +13,22 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+
+		System.out.println(fakeDataSource.getUser());
+
+		FakeJmsBroker fakeJmsBroker = ctx.getBean(FakeJmsBroker.class);
+
+		System.out.println(fakeJmsBroker.getUsername());
+
+		/*
+
 		PetController petController = ctx.getBean("petController", PetController.class);
 		System.out.println("--- The Best Pet is ---");
 		System.out.println(petController.whichPetIsTheBest());
 
 		MyController controller = (MyController) ctx.getBean("myController");
 		System.out.println(controller.sayHello());
-
-		/*
 
 		I18NController i18nController = (I18NController) ctx.getBean("i18NController");
 		System.out.println(i18nController.sayHello());
